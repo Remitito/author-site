@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { crimsonText, playfairDisplay } from "./layout";
+import { crimsonText, playfairDisplay } from "@/fonts/all";
 
 export default function Home() {
   return (
