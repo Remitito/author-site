@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { crimsonText, playfairDisplay } from "@/fonts/all";
 import { submitContactForm } from "@/actions/contact";
+import { buttonStyle } from "../page";
 
 type FormStatus = {
   type: "success" | "error" | null;
@@ -54,7 +55,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center flex-col p-4">
+    <div className="h-[90vh] w-screen flex justify-center items-center flex-col p-4">
       <h2
         className={`${playfairDisplay.className} text-center text-3xl font-bold mb-6 text-gray-800`}
       >
@@ -117,11 +118,7 @@ export default function ContactForm() {
         </div>
 
         <div className="flex justify-center">
-          <button
-            type="submit"
-            disabled={isSending}
-            className={`${crimsonText.className} w-full sm:w-auto bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 transition-all duration-200 font-medium text-lg shadow-lg hover:shadow-xl disabled:bg-gray-500 disabled:cursor-not-allowed`}
-          >
+          <button type="submit" disabled={isSending} className={buttonStyle}>
             {isSending ? "Sending..." : "Submit"}
           </button>
         </div>
