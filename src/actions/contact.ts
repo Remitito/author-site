@@ -19,12 +19,12 @@ export async function submitContactForm(formData: FormData): Promise<Result> {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: "mail.privateemail.com",
-      port: 465,
+      host: process.env.STMP_HOST,
+      port: process.env.STMP_PORT ? parseInt(process.env.STMP_PORT) : 465,
       secure: true,
       auth: {
-        user: process.env.EMAIL_SERVER_SENDER,
-        pass: process.env.EMAIL_SERVER_PASSWORD,
+        user: process.env.STMP_USER,
+        pass: process.env.STMP_PASS,
       },
     });
 
