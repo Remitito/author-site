@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { crimsonText, playfairDisplay } from "@/fonts/all";
+import { playfairDisplay } from "@/fonts/all";
 import { submitContactForm } from "@/actions/contact";
-import { buttonStyle } from "../page";
+import { buttonStyle } from "../stack/page";
 
 type FormStatus = {
   type: "success" | "error" | null;

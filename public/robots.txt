@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.lewisquest.com/
+
+# Sitemaps
+Sitemap: https://www.lewisquest.com/sitemap.xml
