@@ -1,9 +1,9 @@
 // app/page.js (Server Component - no "use client")
 import { headers } from "next/headers";
 
-export default function UKLocationDisplay() {
+export default async function UKLocationDisplay() {
   // This runs on the server automatically
-  const headersList = headers();
+  const headersList = await headers();
   const country = headersList.get("x-vercel-ip-country");
   const isInUK = country === "GB";
 
